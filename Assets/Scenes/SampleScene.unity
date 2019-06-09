@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bcb1bbc351aa3478fb34b7d921bd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  density: 10
+  density: 100
   vertices: []
   indices: 
 --- !u!33 &1974693957

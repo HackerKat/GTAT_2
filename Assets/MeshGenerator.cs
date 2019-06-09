@@ -23,7 +23,7 @@ public class MeshGenerator : MonoBehaviour
 
     private void Start()
     {
-        GeneratorFunction function = new GridFunction();
+        GeneratorFunction function = new SphereFunction();
         mf = GetComponent<MeshFilter>();
         Mesh mesh = new Mesh();
         mesh.name = "Procedural Mesh";
