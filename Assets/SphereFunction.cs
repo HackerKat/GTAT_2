@@ -19,4 +19,24 @@ public class SphereFunction : GeneratorFunction
     {
         return (Cos(uv.y));
     }
+
+    public float getMaxU()
+    {
+        return PI;
+    }
+
+    public float getMaxV()
+    {
+        return PI;
+    }
+
+    public float getMinU()
+    {
+        return -PI;
+    }
+
+    public float getMinV()
+    {
+        return -PI;
+    }
 }

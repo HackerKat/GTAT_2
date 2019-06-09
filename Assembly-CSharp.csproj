@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\GeneratorFunction.cs" />
     <Compile Include="Assets\GridFunction.cs" />
+    <Compile Include="Assets\GridFunctionTwo.cs" />
     <Compile Include="Assets\MeshGenerator.cs" />
     <Compile Include="Assets\SphereFunction.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

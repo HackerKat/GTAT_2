@@ -11,4 +11,12 @@ public interface GeneratorFunction
 
     float getZ(Vector2 uv);
 
+    float getMinU();
+
+    float getMaxU();
+
+    float getMaxV();
+
+    float getMinV();
+
 }

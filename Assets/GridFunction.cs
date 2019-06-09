@@ -19,4 +19,24 @@ public class GridFunction : GeneratorFunction
 
         return 0;
     }
+
+    public float getMaxU()
+    {
+        return 1;
+    }
+
+    public float getMaxV()
+    {
+        return 1;
+    }
+
+    public float getMinU()
+    {
+        return 0;
+    }
+
+    public float getMinV()
+    {
+        return 0;
+    }
 }

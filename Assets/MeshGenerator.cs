@@ -32,21 +32,33 @@ public class MeshGenerator : MonoBehaviour
         indices = new int[(density - 1) * (density - 1) * 3 * 2];
         uvs = new Vector2[vertices.Length];
 
+        float uStep = (function.getMaxU() - function.getMinU()) / (density - 1);
+        float vStep = (function.getMaxV() - function.getMinV()) / (density - 1);
+
+        Debug.Log("uStep: " + uStep);
+        Debug.Log("vStep: " + vStep);
+
         //generate vertices
-        for (int index = 0, u = 0; u < density; u++) {
-            for (int v = 0; v < density; index++, v++) {
+        float u = function.getMinU();
+        float v = function.getMinV();
+        for (int index = 0; u <= function.getMaxU(); ) {
+            for (; v <= function.getMaxV(); index++ ) {
 
-                float u_ = (float)u / (density - 1);
-                float v_ = (float)v / (density - 1);
+                Debug.Log("u: " + u);
+                Debug.Log("v: " + v);
 
-                Vector2 uv = new Vector2(u_, v_);
+
+                Vector2 uv = new Vector2(u, v);
 
                 Vector3 vertex = new Vector3(function.getX(uv), function.getY(uv), function.getZ(uv));
 
                 vertices[index] = vertex;
                 uvs[index] = uv;
 
+               
+                v += vStep;
             }
+            u += uStep;
         }
 
         //geenerate indices (traingles)
